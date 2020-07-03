@@ -1,0 +1,181 @@
+<html>
+<head>
+		<meta charset="UTF-8">
+		<title>x/0</title>
+		<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="big_container">
+		<div class="container">
+			<div class="cube"></div>
+			<div class="cube"></div>
+			<div class="cube"></div>
+			<div class="cube"></div>
+			<div class="cube"></div>
+			<div class="cube"></div>
+			<div class="cube"></div>
+			<div class="cube"></div>
+			<div class="cube"></div>
+		</div>
+	</div>
+
+	<script>
+		let isX = true;
+		const cube = document.querySelectorAll(".cube");
+		for(let item of cube) {
+			item.addEventListener ('click', function(event){
+				if(!event.target.innerHTML) {
+				if (isX) {
+					event.target.innerHTML = "X";
+
+				} else {
+					event.target.innerHTML = "0";
+				}
+				isX = !isX;
+
+				setTimeout(function(){
+					const isWin = checkWin();
+				if (!isWin){
+					const isDraw = checkDraw()
+					if(isDraw == true){
+						alert('nichya')
+					}
+
+				} else {
+					alert("haxtec " + isWin);
+				}
+			})
+			}
+			}); 
+
+		}
+		
+		function checkWin(){
+			
+			if(
+				cube[0].innerHTML == "X" && 
+				cube[1].innerHTML == "X" && 
+				cube[2].innerHTML == "X"
+			){
+				return "X"
+			}
+			if(
+				cube[3].innerHTML == "X" && 
+				cube[4].innerHTML == "X" && 
+				cube[5].innerHTML == "X"
+			){
+				return "X"
+			}
+			if(
+				cube[6].innerHTML == "X" && 
+				cube[7].innerHTML == "X" && 
+				cube[8].innerHTML == "X"
+			){
+				return "X"
+			}
+			if(
+				cube[0].innerHTML == "X" && 
+				cube[3].innerHTML == "X" && 
+				cube[6].innerHTML == "X"
+			){
+				return "X"
+			}
+			if(
+				cube[1].innerHTML == "X" && 
+				cube[4].innerHTML == "X" && 
+				cube[7].innerHTML == "X"
+			){
+				return "X"
+			}
+			if(
+				cube[2].innerHTML == "X" && 
+				cube[5].innerHTML == "X" && 
+				cube[8].innerHTML == "X"
+			){
+				return "X"
+			}
+			if(
+				cube[0].innerHTML == "X" && 
+				cube[4].innerHTML == "X" && 
+				cube[8].innerHTML == "X"
+			){
+				return "X"
+			}
+			if(
+				cube[2].innerHTML == "X" && 
+				cube[4].innerHTML == "X" && 
+				cube[6].innerHTML == "X"
+			){
+				return "X"
+			}
+			////
+			if(
+				cube[0].innerHTML == "0" && 
+				cube[1].innerHTML == "0" && 
+				cube[2].innerHTML == "0"
+			){
+				return "0"
+			}
+			if(
+				cube[3].innerHTML == "0" && 
+				cube[4].innerHTML == "0" && 
+				cube[5].innerHTML == "0"
+			){
+				return "0"
+			}
+			if(
+				cube[6].innerHTML == "0" && 
+				cube[7].innerHTML == "0" && 
+				cube[8].innerHTML == "0"
+			){
+				return "0"
+			}
+			if(
+				cube[0].innerHTML == "0" && 
+				cube[3].innerHTML == "0" && 
+				cube[6].innerHTML == "0"
+			){
+				return "0"
+			}
+			if(
+				cube[1].innerHTML == "0" && 
+				cube[4].innerHTML == "0" && 
+				cube[7].innerHTML == "0"
+			){
+				return "0"
+			}
+			if(
+				cube[2].innerHTML == "0" && 
+				cube[5].innerHTML == "0" && 
+				cube[8].innerHTML == "0"
+			){
+				return "0"
+			}
+			if(
+				cube[0].innerHTML == "0" && 
+				cube[4].innerHTML == "0" && 
+				cube[8].innerHTML == "0"
+			){
+				return "0"
+			}
+			if(
+				cube[2].innerHTML == "0" && 
+				cube[4].innerHTML == "0" && 
+				cube[6].innerHTML == "0"
+			){
+				return "0"
+			}
+
+		}
+
+		function checkDraw(){
+			for(let item of cube) {
+				if(!item.innerHTML){
+					return false;
+				} 
+			} 
+			return true;
+		}
+	</script>
+</body>
+</html>
