@@ -1,0 +1,99 @@
+.container{
+	width: 100%;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border: 2px solid #000;
+}
+
+.section{
+	width: 80%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: red;
+}
+
+.title{
+	width: 60%;
+	height: 50px;
+	font-size: 18px;
+	font-family: arial;
+	border:2px solid red;
+	outline: none;
+	padding-left: 20px;
+	border-radius: 25px 0 0 25px;
+}
+
+.add{
+	font-size: 18px;
+	font-family: arial;
+	background-color:#d9d9d9;
+	outline: none;
+	width: 10%;
+	height: 46px;
+	cursor: pointer;
+	border: 2px solid #d9d9d9;
+	border-radius: 0 25px 25px 0;
+}
+
+.add:hover{
+	background-color: #bbb;
+	border: 2px solid #bbb;
+}
+
+.toDoListContainer{
+	margin-top: 40px;	
+	width: 100%;
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	
+	align-items: center;
+	
+
+}
+
+.toDoListTitle{
+	width: 80%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	border: 1px solid #000;
+	font-size: 30px;
+	font-family: arial;
+	justify-content: space-between;
+	
+}
+
+.itemTitle{
+	width: 70%;
+	height: 50px;
+}
+
+.remove{
+	width: 100px;
+	height: 50px;
+	font-size: 18px;
+	font-family: arial;
+}
+.edit{
+	width: 100px;
+	height: 50px;
+	font-size: 18px;
+	font-family: arial;
+}
+
+.done{
+	width: 100px;
+	height: 50px;
+	font-size: 18px;
+	font-family: arial;
+}
+
+.completed{
+	background-color: #009900;
+	text-decoration: line-through;
+}
